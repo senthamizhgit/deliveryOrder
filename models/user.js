@@ -82,12 +82,12 @@ UserSchema.statics.findByCredentials = function(email,password) {
     })
 }
 
-UserSchema.methods.toJSON = function() {
-    var user = this;
-    var userObject = user.toObject();
+// UserSchema.methods.toJSON = function() {
+//     var user = this;
+//     var userObject = user.toObject();
 
-    return _.pick(userObject,['_id','email']);
-};
+//     return _.pick(userObject,['_id','email']);
+// };
 
 UserSchema.methods.generateAuthToken = function() {
     var user = this;
